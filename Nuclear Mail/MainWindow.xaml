@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Nuclear_Mail"
         mc:Ignorable="d"
-        Title="Nuclear Mail" Height="450" Width="800">
+        Title="Nuclear Mail" Height="720" Width="1280">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="55"/>
             <ColumnDefinition Width="3"/>
             <ColumnDefinition Width="*" MinWidth="100"/>
             <ColumnDefinition Width="5"/>
-            <ColumnDefinition Width="*" MinWidth="100"/>
+            <ColumnDefinition Width="2*" MinWidth="100"/>
             <ColumnDefinition Width="5"/>
-            <ColumnDefinition Width="*" MinWidth="100"/>
+            <ColumnDefinition Width="4*" MinWidth="100"/>
         </Grid.ColumnDefinitions>
 
         <Rectangle Grid.Column="1" Fill="#FFC8C8C8"/>
@@ -22,11 +22,11 @@
         <GridSplitter Grid.Column="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#FF99A1F3"/>
 
         <StackPanel Grid.Column="0">
-            <Button x:Name="_1" Content="M" Style="{DynamicResource ButtonMailIcon}"/>
+            <Button x:Name="_1" Content="M" Style="{StaticResource ButtonMailIcon}"/>
             <Button x:Name="_2" Content="S" Style="{StaticResource ButtonMailIcon}"/>
             <Button x:Name="_3" Content="P" Style="{StaticResource ButtonMailIcon}"/>
         </StackPanel>
-        <Button VerticalAlignment="Bottom" Content="+" Height="55" FontSize="48" FontFamily="Arial"/>
+        <Button VerticalAlignment="Bottom" Content="+" Height="55" FontSize="48" FontFamily="Arial" BorderThickness="0"/>
 
         <StackPanel Grid.Column="2" Margin="0,5,0,0">
             <Button Content="Входящие" Style="{StaticResource Folderlist}"/>
@@ -36,6 +36,96 @@
             <Button Content="Корзина" Style="{StaticResource Folderlist}"/>
         </StackPanel>
         <StackPanel Grid.Column="4">
+            <Button Padding="0" HorizontalContentAlignment="Stretch" BorderThickness="0" Margin="2.5,5,2.5,0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Ellipse Height="50" Width="50">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="Images/pechhenka.png" Stretch="UniformToFill"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" Text="mail@pechhenka.ru"/>
+                        <TextBlock Grid.Row="1" Text="Привет мир!"/>
+                        <TextBlock Grid.Row="3" Text="Разнообразный и богатый опыт консультации ..." Foreground="#FF343434"/>
+                    </Grid>
+                </Grid>
+            </Button>
+            <Button Padding="0" HorizontalContentAlignment="Stretch" BorderThickness="0" Margin="2.5,5,2.5,0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Ellipse Height="50" Width="50">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="Images/pechhenka.png" Stretch="UniformToFill"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" Text="mail@pechhenka.ru"/>
+                        <TextBlock Grid.Row="1" Text="Привет мир1!"/>
+                        <TextBlock Grid.Row="3" Text="Разнообразный и богатый опыт консультации ..." Foreground="#FF343434"/>
+                    </Grid>
+                </Grid>
+            </Button>
+            <Button Padding="0" HorizontalContentAlignment="Stretch" BorderThickness="0" Margin="2.5,5,2.5,0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Ellipse Height="50" Width="50">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="Images/pechhenka.png" Stretch="UniformToFill"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" Text="mail@pechhenka.ru"/>
+                        <TextBlock Grid.Row="1" Text="Привет мир2!"/>
+                        <TextBlock Grid.Row="3" Text="Разнообразный и богатый опыт консультации ..." Foreground="#FF343434"/>
+                    </Grid>
+                </Grid>
+            </Button>
         </StackPanel>
+        <Grid Grid.Column="6">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Rectangle Grid.Row="2" Fill="#FFC8C8C8"/>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="50"/>
+                </Grid.ColumnDefinitions>
+                <Path Grid.Column="0" Style="{StaticResource Reply}"/>
+                <Path Grid.Column="1" Style="{StaticResource Forward}"/>
+                <Path Grid.Column="2" Style="{StaticResource Trash}"/>
+                <Path Grid.Column="3" Style="{StaticResource Spam}"/>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>
