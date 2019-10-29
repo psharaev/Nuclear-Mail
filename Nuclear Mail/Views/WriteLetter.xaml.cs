@@ -10,26 +10,31 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Nuclear_Mail
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для WriteLetter.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class WriteLetter : Window
     {
-        public MainWindow()
+        public WriteLetter()
         {
             InitializeComponent();
         }
 
-        private void WriteLetter(object sender,RoutedEventArgs e)
+        private void Send(object sender, RoutedEventArgs e)
         {
-            WriteLetter win = new WriteLetter();
+        }
+        
+        private void CloseWindow(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
 
-            win.Show();
+        private void AddAttachments(object sender, RoutedEventArgs e)
+        {
         }
     }
 }

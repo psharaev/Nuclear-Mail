@@ -18,8 +18,8 @@
         </Grid.ColumnDefinitions>
 
         <Rectangle Grid.Column="1" Fill="#FFC8C8C8"/>
-        <GridSplitter Grid.Column="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#FF99A1F3"/>
-        <GridSplitter Grid.Column="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#FF99A1F3"/>
+        <GridSplitter Grid.Column="3"/>
+        <GridSplitter Grid.Column="5"/>
 
         <StackPanel Grid.Column="0">
             <Button x:Name="_1" Content="M" Style="{StaticResource ButtonMailIcon}"/>
@@ -29,6 +29,15 @@
         <Button VerticalAlignment="Bottom" Content="+" Height="55" FontSize="48" FontFamily="Arial" BorderThickness="0"/>
 
         <StackPanel Grid.Column="2" Margin="0,5,0,0">
+            <Grid Margin="2.5,0,2.5,2.5" Height="50">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0" Style="{StaticResource Pen_Button}" Click="WriteLetter"/>
+                <Button Grid.Column="1" Style="{StaticResource Refresh_Button}"/>
+            </Grid>
             <Button Content="Входящие" Style="{StaticResource Folderlist}"/>
             <Button Content="Черновики" Style="{StaticResource Folderlist}"/>
             <Button Content="Отправленные" Style="{StaticResource Folderlist}"/>
@@ -121,10 +130,10 @@
                     <ColumnDefinition Width="50"/>
                     <ColumnDefinition Width="50"/>
                 </Grid.ColumnDefinitions>
-                <Path Grid.Column="0" Style="{StaticResource Reply}"/>
-                <Path Grid.Column="1" Style="{StaticResource Forward}"/>
-                <Path Grid.Column="2" Style="{StaticResource Trash}"/>
-                <Path Grid.Column="3" Style="{StaticResource Spam}"/>
+                <Path Grid.Column="0" Style="{StaticResource Reply_Icon}"/>
+                <Path Grid.Column="1" Style="{StaticResource Forward_Icon}"/>
+                <Path Grid.Column="2" Style="{StaticResource Trash_Icon}"/>
+                <Path Grid.Column="3" Style="{StaticResource Spam_Icon}"/>
             </Grid>
         </Grid>
     </Grid>

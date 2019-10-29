@@ -4,7 +4,7 @@
     <Style x:Key="BaseIcon" TargetType="Path">
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="Fill" Value="#DDDDDD"/>
+        <Setter Property="Fill" Value="#252525"/>
         <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
         <Setter Property="RenderTransform">
             <Setter.Value>
@@ -13,24 +13,113 @@
         </Setter>
     </Style>
     
-    <Style x:Key="Reply" BasedOn="{StaticResource BaseIcon}" TargetType="Path">
+    <Style x:Key="Reply_Icon" BasedOn="{StaticResource BaseIcon}" TargetType="Path">
         <Setter Property="Data" Value="M13 12.998c-.003-.066-.119-2.181-4-2.184l-1-.001v1.901a1.286 1.286 0 01-2.041 1.04v.001l-.005-.004a1.307 1.307 0 01-.144-.124L.655 9.218h.001A1.478 1.478 0 010 8c0-.501.259-.945.655-1.217v-.001l5.152-4.406A1.286 1.286 0 018 3.286v1.882l1 .002c6.407.035 6.014 7.588 6 7.824V13a1 1 0 01-2 0v-.002z"/>
-        <Setter Property="ToolTip" Value="Ответить"/>
     </Style>
-    <Style x:Key="Forward" BasedOn="{StaticResource BaseIcon}" TargetType="Path">
+    <Style x:Key="Forward_Icon" BasedOn="{StaticResource BaseIcon}" TargetType="Path">
         <Setter Property="Data" Value="M7 5.228V3.286C7 2.576 7.576 2 8.286 2c.354 0 .675.144.907.376l5.152 4.406v.001c.396.272.655.716.655 1.217 0 .501-.259.946-.656 1.218h.001L9.19 13.627c-.045.045-.093.086-.144.124l-.005.004v-.001c-.212.155-.473.246-.755.246C7.576 14 7 13.424 7 12.714v-1.956L1.213 10C.145 9.817 0 9.104 0 8s.142-1.851 1.213-2L7 5.228z"/>
-        <Setter Property="ToolTip" Value="Переслать"/>
     </Style>
-    <Style x:Key="Trash" BasedOn="{StaticResource BaseIcon}" TargetType="Path">
+    <Style x:Key="Trash_Icon" BasedOn="{StaticResource BaseIcon}" TargetType="Path">
         <Setter Property="Data" Value="M12.437 6a.463.463 0 01.464.489l-.367 6.679c0 1.104-.914 1.84-2.018 1.84H5.548c-1.103 0-2.017-.686-2.017-1.79l-.436-6.724A.462.462 0 013.558 6h8.879zM2.128 5a.529.529 0 01-.531-.525l.001-.012c0-.414.251-.769.608-.922.455-.241 1.681-.439 3.292-.542V1.41C5.498.632 6.13 0 6.908 0h2.184c.778 0 1.41.632 1.41 1.41v1.589c1.611.103 2.837.301 3.292.542.357.153.608.508.608.922 0 .297-.24.537-.537.537H2.128zm6.571-3.407H7.301A.301.301 0 007 1.894v1.041a46.454 46.454 0 012 0V1.894a.301.301 0 00-.301-.301z"/>
-        <Setter Property="ToolTip" Value="Удалить"/>
     </Style>
-    <Style x:Key="Spam" BasedOn="{StaticResource BaseIcon}" TargetType="Path">
+    <Style x:Key="Spam_Icon" BasedOn="{StaticResource BaseIcon}" TargetType="Path">
         <Setter Property="Data" Value="M8.875 2c.003 0 1.516-.026 2.28.635.825.714.845 1.99.845 1.99v3.412s.003 1.885-.754 2.756c-.757.872-2.431 1.886-2.96 2.614-.529.729-.834 1.722-1.672 1.722-.837 0-1.239-.521-1.239-1.311 0-.377.349-1.144.349-2.193 0-.408-.34-.625-.893-.625H3c-1.263 0-2-.771-2-2 0-.653.359-1.223.889-1.524a1.751 1.751 0 01.876-1.75 1.751 1.751 0 01.875-1.75A1.75 1.75 0 015.375 2h3.5zM13 9.438c0 .724.276 1.312 1 1.312s1-.588 1-1.312V3.313C15 2.588 14.724 2 14 2s-1 .588-1 1.313v6.125z"/>
-        <Setter Property="ToolTip" Value="Спам"/>
+    </Style>
+    <Style x:Key="Pen_Icon" BasedOn="{StaticResource BaseIcon}" TargetType="Path">
+        <Setter Property="Data" Value="M14.553 4.396l-1.437 1.436-3.951-3.95L10.602.448a1.523 1.523 0 0 1 2.155 0l1.796 1.795a1.522 1.522 0 0 1 0 2.154zM12.04 6.909l-6.826 6.823a1.97 1.97 0 0 1-1.257.536l-3.233.718a.536.536 0 0 1-.536-.18.604.604 0 0 1-.179-.535l.718-3.231c.023-.47.213-.916.536-1.258L8.088 2.96l3.951 3.95zm-7.635 4.938L3.147 10.59a.38.38 0 0 0-.536 0 .361.361 0 0 0-.072.108l-.018-.019-.468 1.834a.31.31 0 0 0 .107.322c.073.1.203.143.322.107l1.833-.469-.018-.018a.37.37 0 0 0 .107-.072.382.382 0 0 0 0-.536z"/>
+    </Style>
+    <Style x:Key="Attachment_Icon" BasedOn="{StaticResource BaseIcon}" TargetType="Path">
+        <Setter Property="Data" Value="M5.475 4.19c1.073-1.073 2.816-1.073 3.889 0s1.073 2.816 0 3.889L6.56 10.884c-.39.39-1.024.39-1.414 0-.391-.391-.391-1.024 0-1.415l2.121-2.121.682-.682c.292-.292.292-.768 0-1.06-.293-.293-.768-.293-1.061 0L3.731 8.762c-.975.976-.975 2.56 0 3.536.976.975 2.56.975 3.536 0l5.061-5.061c.975-.976.975-2.56 0-3.536-.634-.634-1.526-.856-2.34-.665-.133.033-.274.012-.391-.06-.16-.091-.323-.175-.491-.248-.476-.207-.987-.316-1.5-.327-.057 0-.108-.035-.129-.089-.021-.053-.006-.113.036-.152.035-.033.065-.061.083-.077 1.767-1.548 4.46-1.48 6.145.205 1.756 1.756 1.756 4.608 0 6.364l-5.06 5.06c-1.756 1.756-4.608 1.756-6.364 0-1.756-1.756-1.756-4.608 0-6.364L5.475 4.19z"/>
+    </Style>
+    <Style x:Key="Send_Icon" BasedOn="{StaticResource BaseIcon}" TargetType="Path">
+        <Setter Property="Data" Value="m23.685.139c-.23-.163-.532-.185-.782-.054l-22.5 11.75c-.266.139-.423.423-.401.722.023.3.222.556.505.653l6.255 2.138 13.321-11.39-10.308 12.419 10.483 3.583c.078.026.16.04.242.04.136 0 .271-.037.39-.109.19-.116.319-.311.352-.53l2.75-18.5c.041-.28-.077-.558-.307-.722z"/>
+    </Style>
+    <Style x:Key="Back_Icon" BasedOn="{StaticResource BaseIcon}" TargetType="Path">
+        <Setter Property="Data" Value="M464.344,207.418l0.768,0.168H135.888l103.496-103.724c5.068-5.064,7.848-11.924,7.848-19.124 c0-7.2-2.78-14.012-7.848-19.088L223.28,49.538c-5.064-5.064-11.812-7.864-19.008-7.864c-7.2,0-13.952,2.78-19.016,7.844 L7.844,226.914C2.76,231.998-0.02,238.77,0,245.974c-0.02,7.244,2.76,14.02,7.844,19.096l177.412,177.412 c5.064,5.06,11.812,7.844,19.016,7.844c7.196,0,13.944-2.788,19.008-7.844l16.104-16.112c5.068-5.056,7.848-11.808,7.848-19.008 c0-7.196-2.78-13.592-7.848-18.652L134.72,284.406h329.992c14.828,0,27.288-12.78,27.288-27.6v-22.788 C492,219.198,479.172,207.418,464.344,207.418z"/>
+    </Style>
+    <Style x:Key="Refresh_Icon" BasedOn="{StaticResource BaseIcon}" TargetType="Path">
+        <Setter Property="Data" Value="M 13.8125 0 C 7.878906 0 4.082031 4.292969 4 10 L 0.5 10 C 0.300781 10 0.09375 10.113281 0.09375 10.3125 C -0.0078125 10.511719 -0.0078125 10.710938 0.09375 10.8125 L 6.09375 18.5 C 6.195313 18.601563 6.300781 18.6875 6.5 18.6875 C 6.699219 18.6875 6.804688 18.601563 6.90625 18.5 L 12.90625 10.8125 C 13.007813 10.710938 13.007813 10.511719 12.90625 10.3125 C 12.804688 10.113281 12.601563 10 12.5 10 L 9 10 C 9.066406 2.464844 12.921875 0.789063 13.8125 0.09375 C 14.011719 -0.0078125 14.011719 0 13.8125 0 Z M 19.5 7.34375 C 19.351563 7.34375 19.195313 7.398438 19.09375 7.5 L 13.09375 15.1875 C 12.992188 15.386719 13 15.585938 13 15.6875 C 13.101563 15.886719 13.304688 16 13.40625 16 L 17 16 C 16.933594 23.535156 13.078125 25.210938 12.1875 25.90625 C 11.988281 26.007813 11.988281 26 12.1875 26 C 18.121094 26 21.917969 21.707031 22 16 L 25.40625 16 C 25.605469 16 25.8125 15.886719 25.8125 15.6875 C 26.011719 15.488281 26.007813 15.289063 25.90625 15.1875 L 19.90625 7.5 C 19.804688 7.398438 19.648438 7.34375 19.5 7.34375 Z"/>
+        <Setter Property="ToolTip" Value="Обновить"/>
+        <Setter Property="RenderTransform">
+            <Setter.Value>
+                <ScaleTransform ScaleX="0.8" ScaleY="0.8"/>
+            </Setter.Value>
+        </Setter>
     </Style>
 
-    <Style x:Key="temp" BasedOn="{StaticResource BaseIcon}" TargetType="Path">
-        <Setter Property="Data" Value=""/>
+    <Style x:Key="Icon_Button_Base" TargetType="Button">
+        <Setter Property="BorderThickness" Value="0"/>
+    </Style>
+    <Style x:Key="Reply_Button" TargetType="Button" BasedOn="{StaticResource Icon_Button_Base}">
+        <Setter Property="ToolTip" Value="Ответить"/>
+        <Setter Property="Content">
+            <Setter.Value>
+                <Path Style="{StaticResource Reply_Icon}"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="Forward_Button" TargetType="Button" BasedOn="{StaticResource Icon_Button_Base}">
+        <Setter Property="ToolTip" Value="Переслать"/>
+        <Setter Property="Content">
+            <Setter.Value>
+                <Path Style="{StaticResource Forward_Icon}"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="Trash_Button" TargetType="Button" BasedOn="{StaticResource Icon_Button_Base}">
+        <Setter Property="ToolTip" Value="Удалить"/>
+        <Setter Property="Content">
+            <Setter.Value>
+                <Path Style="{StaticResource Trash_Icon}"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="Spam_Button" TargetType="Button" BasedOn="{StaticResource Icon_Button_Base}">
+        <Setter Property="ToolTip" Value="Спам"/>
+        <Setter Property="Content">
+            <Setter.Value>
+                <Path Style="{StaticResource Spam_Icon}"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="Pen_Button" TargetType="Button" BasedOn="{StaticResource Icon_Button_Base}">
+        <Setter Property="ToolTip" Value="Написать"/>
+        <Setter Property="Content">
+            <Setter.Value>
+                <Path Style="{StaticResource Pen_Icon}"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="Refresh_Button" TargetType="Button" BasedOn="{StaticResource Icon_Button_Base}">
+        <Setter Property="ToolTip" Value="Обновить"/>
+        <Setter Property="Content">
+            <Setter.Value>
+                <Path Style="{StaticResource Refresh_Icon}"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="Send_Button" TargetType="Button" BasedOn="{StaticResource Icon_Button_Base}">
+        <Setter Property="ToolTip" Value="Отправить"/>
+        <Setter Property="Content">
+            <Setter.Value>
+                <Path Style="{StaticResource Send_Icon}"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="Back_Button" TargetType="Button" BasedOn="{StaticResource Icon_Button_Base}">
+        <Setter Property="ToolTip" Value="Назад"/>
+        <Setter Property="Content">
+            <Setter.Value>
+                <Path Style="{StaticResource Back_Icon}"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="Attachment_Button" TargetType="Button" BasedOn="{StaticResource Icon_Button_Base}">
+        <Setter Property="ToolTip" Value="Добавить вложение"/>
+        <Setter Property="Content">
+            <Setter.Value>
+                <Path Style="{StaticResource Attachment_Icon}"/>
+            </Setter.Value>
+        </Setter>
     </Style>
 </ResourceDictionary>
