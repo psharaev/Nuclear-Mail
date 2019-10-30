@@ -6,17 +6,6 @@
         xmlns:local="clr-namespace:Nuclear_Mail"
         mc:Ignorable="d"
         Title="Написать письмо" Height="450" Width="800">
-    <Window.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="../Styles/Buttons.xaml" />
-                <ResourceDictionary Source="../Styles/GridSplitters.xaml" />
-                <ResourceDictionary Source="../Icons/Icons.xaml" />
-                <ResourceDictionary Source="WriteLetterDictionary.xaml" />
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-        
-    </Window.Resources>
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -61,9 +50,9 @@
                 <TextBlock Grid.Row="2" Style="{StaticResource HeadersTable}">Кому</TextBlock>
                 <TextBlock Grid.Row="3" Style="{StaticResource HeadersTable}">Тема</TextBlock>
 
-                <TextBox x:Name="From" Grid.Row="1" Style="{StaticResource TextBoxHeaders}">Павел Шараев</TextBox>
-                <TextBox x:Name="To" Grid.Row="2" Style="{StaticResource TextBoxHeaders}">mail@pechhenka.ru</TextBox>
-                <TextBox x:Name="Subject" Grid.Row="3" Style="{StaticResource TextBoxHeaders}">Hello world!</TextBox>
+                <TextBox x:Name="From" Grid.Row="1" Tag="Иван Иванов" Style="{StaticResource TextBoxHeaders}"></TextBox>
+                <TextBox x:Name="To" Grid.Row="2" Tag="example@domain.com," Style="{StaticResource TextBoxHeaders}"></TextBox>
+                <TextBox x:Name="Subject" Grid.Row="3" Tag="Hello world!" Style="{StaticResource TextBoxHeaders}"></TextBox>
             </Grid>
             <TextBox Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled"/>
         </Grid>

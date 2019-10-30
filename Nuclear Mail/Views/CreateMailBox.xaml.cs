@@ -10,26 +10,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Nuclear_Mail
+namespace Nuclear_Mail.Views
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для CreateMailBox.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CreateMailBox : Window
     {
-        public MainWindow()
+        public CreateMailBox()
         {
             InitializeComponent();
         }
 
-        private void WriteLetter(object sender,RoutedEventArgs e)
+        private void AddMailBox(object sender, RoutedEventArgs e)
         {
-            WriteLetter win = new WriteLetter();
 
-            win.Show();
         }
     }
 }
