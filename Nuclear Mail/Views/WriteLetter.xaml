@@ -44,7 +44,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Button Style="{StaticResource Reply_Button}" ToolTip="Назад" Click="CloseWindow"/>
-                <Button Grid.Column="1" Style="{StaticResource Send_Button}"/>
+                <Button Grid.Column="1" Style="{StaticResource Send_Button}" Click="Send"/>
                 
                 <TextBlock Grid.Row="1" Style="{StaticResource HeadersTable}">От</TextBlock>
                 <TextBlock Grid.Row="2" Style="{StaticResource HeadersTable}">Кому</TextBlock>
