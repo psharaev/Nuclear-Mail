@@ -61,6 +61,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -80,10 +81,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Models\Data.cs" />
+    <Compile Include="Models\Data\Data.cs" />
+    <Compile Include="Models\Data\Saver.cs" />
     <Compile Include="Models\MailBox.cs" />
     <Compile Include="Models\Patterns\Singleton.cs" />
     <Compile Include="Models\Protocols\Protocol.cs" />
+    <Compile Include="ViewModels\MailBoxManager.cs" />
     <Compile Include="Views\CreateMailBox.xaml.cs">
       <DependentUpon>CreateMailBox.xaml</DependentUpon>
     </Compile>
@@ -162,9 +165,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModels\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Images\pechhenka.png" />
   </ItemGroup>

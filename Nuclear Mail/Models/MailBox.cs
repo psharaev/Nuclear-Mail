@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using Nuclear_Mail.Models.Protocols;
 
 namespace Nuclear_Mail.Models
 {
+    [Serializable]
     public class MailBox
     {
         public string email_address = "";
@@ -16,8 +18,13 @@ namespace Nuclear_Mail.Models
         public bool useImap = false;
         public bool useSmtp = false;
 
-        public POP3 Pop3;
-        public IMAP Imap;
-        public SMTP Smtp;
+        public POP Pop3 = null;
+        public IMAP Imap = null;
+        public SMTP Smtp = null;
+
+        public MailBox()
+        {
+
+        }
     }
 }
