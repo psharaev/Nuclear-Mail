@@ -1,11 +1,11 @@
-﻿<Window x:Class="Nuclear_Mail.MainWindow"
+﻿<Window x:Class="Nuclear_Mail.Views.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Nuclear_Mail"
+        xmlns:local="clr-namespace:Nuclear_Mail.Views"
         mc:Ignorable="d"
-        Title="Nuclear Mail" Height="720" Width="1280">
+        Title="Nuclear Mail" WindowState="Maximized">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="55"/>
@@ -21,10 +21,7 @@
         <GridSplitter Grid.Column="3"/>
         <GridSplitter Grid.Column="5"/>
 
-        <StackPanel Grid.Column="0">
-            <Button x:Name="_1" Content="M" Style="{StaticResource ButtonMailIcon}"/>
-            <Button x:Name="_2" Content="S" Style="{StaticResource ButtonMailIcon}"/>
-            <Button x:Name="_3" Content="P" Style="{StaticResource ButtonMailIcon}"/>
+        <StackPanel x:Name="MainMailBoxesIcon"  Grid.Column="0">
         </StackPanel>
         <Button VerticalAlignment="Bottom" Content="+" Height="55" FontSize="48" FontFamily="Arial" BorderThickness="0" Click="CreateMailBox"/>
 
