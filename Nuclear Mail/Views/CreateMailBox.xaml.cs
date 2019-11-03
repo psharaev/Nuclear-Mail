@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Nuclear_Mail.ViewModels;
 
 namespace Nuclear_Mail.Views
 {
@@ -19,6 +20,8 @@ namespace Nuclear_Mail.Views
     /// </summary>
     public partial class CreateMailBox : Window
     {
+        private bool ManualMode = false;
+
         public CreateMailBox()
         {
             InitializeComponent();
@@ -26,7 +29,21 @@ namespace Nuclear_Mail.Views
 
         private void AddMailBox(object sender, RoutedEventArgs e)
         {
+            Action create;
+            if (ManualMode)
+            {
+                create = () => MailManager.CreateMailBox(Login.Text, Password.Text);
+            }
+            else
+                create = () => MailManager.CreateMailBox(Login.Text, Password.Text);
+            try
+            {
+                create();
+            }
+            catch
+            {
 
+            }
         }
     }
 }
