@@ -1,5 +1,6 @@
 ﻿using Nuclear_Mail.Models;
 using Nuclear_Mail.Models.Data;
+using Nuclear_Mail.Views;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
