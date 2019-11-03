@@ -65,6 +65,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -85,10 +86,14 @@
     </ApplicationDefinition>
     <Compile Include="Models\Data\Data.cs" />
     <Compile Include="Models\Data\Saver.cs" />
+    <Compile Include="Models\Extensions.cs" />
     <Compile Include="Models\MailBox.cs" />
     <Compile Include="Models\Patterns\Singleton.cs" />
     <Compile Include="Models\Protocols\Protocol.cs" />
-    <Compile Include="ViewModels\MailBoxManager.cs" />
+    <Compile Include="ViewModels\MailManager.cs" />
+    <Compile Include="Models\MailController.cs" />
+    <Compile Include="ViewModels\Signals\ProcessingSignals.cs" />
+    <Compile Include="ViewModels\Signals\Signals.cs" />
     <Compile Include="Views\CreateMailBox.xaml.cs">
       <DependentUpon>CreateMailBox.xaml</DependentUpon>
     </Compile>
