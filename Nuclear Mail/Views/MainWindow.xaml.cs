@@ -21,6 +21,7 @@ namespace Nuclear_Mail
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
+    public partial class MainWindow : Window , IReceive<SignalAddMailBox>
     {
         public MainWindow()
         {
@@ -39,6 +40,11 @@ namespace Nuclear_Mail
             CreateMailBox win = new CreateMailBox();
 
             win.Show();
+        }
+
+        void IReceive<SignalAddMailBox>.HandleSignal(SignalAddMailBox arg)
+        {
+            AddMailBoxButton(arg.mailBox);
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Nuclear_Mail.Models.Patterns;
+using Nuclear_Mail.ViewModels.Signals;
 
 namespace Nuclear_Mail.Models.Data
 {
@@ -41,7 +42,7 @@ namespace Nuclear_Mail.Models.Data
             if (File.Exists(path))
                 throw new Exception("Tакой почтовый ящик уже существует");
             Saver.SavePath(mailBox, path);
-
+            ProcessingSignals.Instance.Send(new SignalAddMailBox(mailBox));
         }
 
         public void RemoveMailBox(in MailBox mailBox)
