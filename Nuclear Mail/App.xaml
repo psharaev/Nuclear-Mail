@@ -12,6 +12,7 @@
                 <ResourceDictionary Source="Styles/TextBlock.xaml" />
                 <ResourceDictionary Source="Styles/TextBox.xaml" />
                 <ResourceDictionary Source="Icons/Icons.xaml" />
+                <ResourceDictionary Source="UIElements/UIElements.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
