@@ -47,7 +47,7 @@
         </Setter>
     </Style>
 
-    <Style x:Key="Icon_Button_Base" TargetType="Button">
+    <Style x:Key="Icon_Button_Base" TargetType="Button" BasedOn="{StaticResource ButtonBase}">
         <Setter Property="BorderThickness" Value="0"/>
     </Style>
     <Style x:Key="Reply_Button" TargetType="Button" BasedOn="{StaticResource Icon_Button_Base}">
