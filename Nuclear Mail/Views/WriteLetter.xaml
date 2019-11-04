@@ -21,17 +21,22 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Button Click="AddAttachments" Style="{StaticResource Attachment_Button}"/>
-            <StackPanel Grid.Row="1" VerticalAlignment="Top">
-                <Grid Height="30">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="25"/>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Text="C:\Folder\File.txt"/>
-                    <Button Grid.Column="1" Style="{StaticResource ButtonCircleClose}" Height="25" Width="25"/>
-                </Grid>
-                
-            </StackPanel>
+            <ScrollViewer Grid.Row="1">
+                <ItemsControl Name="AttachmentsPanel">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Height="30">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button Tag="{Binding }" Style="{StaticResource ButtonCircleClose}" Margin="2.5" Click="RemoveAttachment" />
+                                <TextBlock Grid.Column="1" Text="{Binding }" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            </Grid>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
         </Grid>
         <Grid>
             <Grid.RowDefinitions>
@@ -39,7 +44,7 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            
+
 
             <Grid Grid.Row="0">
                 <Grid.RowDefinitions>
@@ -55,7 +60,7 @@
 
                 <Button Style="{StaticResource Reply_Button}" ToolTip="Назад" Click="CloseWindow"/>
                 <Button Grid.Column="1" Style="{StaticResource Send_Button}" Click="Send"/>
-                
+
                 <TextBlock Grid.Row="1" Style="{StaticResource HeadersTable}">От</TextBlock>
                 <TextBlock Grid.Row="2" Style="{StaticResource HeadersTable}">Кому</TextBlock>
                 <TextBlock Grid.Row="3" Style="{StaticResource HeadersTable}">Тема</TextBlock>
@@ -75,7 +80,7 @@
                     <TextBox x:Name="FromAddress" Grid.Row="0" Grid.Column="1" Tag="example@domain.com" Style="{StaticResource TextBoxHeaders}"></TextBox>
                     <TextBox x:Name="ToAddress" Grid.Row="2" Grid.Column="1" Tag="example@domain.com" Style="{StaticResource TextBoxHeaders}"></TextBox>
                 </Grid>
-                
+
                 <TextBox x:Name="Subject" Grid.Row="3" Grid.Column="1" Tag="Hello world!" Style="{StaticResource TextBoxHeaders}"></TextBox>
             </Grid>
             <TextBox Grid.Row="1" x:Name="Body" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled"/>

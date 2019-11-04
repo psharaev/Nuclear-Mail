@@ -4,6 +4,7 @@ using Nuclear_Mail.Models;
 using Nuclear_Mail.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -26,11 +27,12 @@ namespace Nuclear_Mail.Views
     public partial class WriteLetter : Window
     {
         private MailBox mailBox;
-        private SortedSet<string> attachments = new SortedSet<string>();
+        private ObservableCollection<string> attachments = new ObservableCollection<string>();
 
         public WriteLetter(MailBox mailBox)
         {
             InitializeComponent();
+            AttachmentsPanel.ItemsSource = attachments;
             this.mailBox = mailBox;
             FromName.Text = mailBox.Name;
             FromAddress.Text = mailBox.email_address;
@@ -68,8 +70,15 @@ namespace Nuclear_Mail.Views
             if (openFileDialog.ShowDialog() == true)
             {
                 foreach (string filename in openFileDialog.FileNames)
-                    attachments.Add(filename);
+                    if (!attachments.Contains(filename))
+                        attachments.Add(filename);
             }
+        }
+
+        private void RemoveAttachment(object sender, RoutedEventArgs e)
+        {
+            
+            attachments.Remove(((Button)sender).Tag.ToString());
         }
     }
 }
